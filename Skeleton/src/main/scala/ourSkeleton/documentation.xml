@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<surround with="index.html" at="here">
+<div class="code">
+ <h2> Getting Started </h2>
+</div>
+<ol>
+  <li><a href=" NewApplication">Creating a new application </a></li>
+  <li><a href=" Anatomy">Anatomy of Our framework </a></li>
+  <li><a href=" IDE">Setting-up your preferred IDE </a></li>
+  <li><a href=" Samples">Sample applications </a></li>
+</ol>
+			
+</surround>

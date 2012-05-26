@@ -1,0 +1,29 @@
+[debug] 
+[debug] Initial source changes: 
+[debug] 	removed:Set()
+[debug] 	added: Set()
+[debug] 	modified: Set(/Users/samuelmeasho/Documents/ScalaWorkSpace/Skeleton/src/main/scala/ourSkeleton/MyApplication.scala)
+[debug] Removed products: Set(/Users/samuelmeasho/Documents/ScalaWorkSpace/Skeleton/target/scala-2.9.1/classes/myApp/MyApplication$$anonfun$init$1.class, /Users/samuelmeasho/Documents/ScalaWorkSpace/Skeleton/target/scala-2.9.1/classes/myApp/MyApplication$$anonfun$init$5.class, /Users/samuelmeasho/Documents/ScalaWorkSpace/Skeleton/target/scala-2.9.1/classes/myApp/MyApplication$$anonfun$init$4.class, /Users/samuelmeasho/Documents/ScalaWorkSpace/Skeleton/target/scala-2.9.1/classes/myApp/MyApplication$$anonfun$init$6.class, /Users/samuelmeasho/Documents/ScalaWorkSpace/Skeleton/target/scala-2.9.1/classes/myApp/MyApplication$$anonfun$prepareForm$1.class, /Users/samuelmeasho/Documents/ScalaWorkSpace/Skeleton/target/scala-2.9.1/classes/myApp/MyApplication$MakeForm$2$.class, /Users/samuelmeasho/Documents/ScalaWorkSpace/Skeleton/target/scala-2.9.1/classes/myApp/MyApplication$$anonfun$init$3.class, /Users/samuelmeasho/Documents/ScalaWorkSpace/Skeleton/target/scala-2.9.1/classes/myApp/MyApplication.class, /Users/samuelmeasho/Documents/ScalaWorkSpace/Skeleton/target/scala-2.9.1/classes/myApp/MyApplication$$anonfun$2.class, /Users/samuelmeasho/Documents/ScalaWorkSpace/Skeleton/target/scala-2.9.1/classes/myApp/MyApplication$$anonfun$3$$anonfun$4.class, /Users/samuelmeasho/Documents/ScalaWorkSpace/Skeleton/target/scala-2.9.1/classes/myApp/MyApplication$$anonfun$3.class, /Users/samuelmeasho/Documents/ScalaWorkSpace/Skeleton/target/scala-2.9.1/classes/myApp/MyApplication$$anonfun$init$2.class, /Users/samuelmeasho/Documents/ScalaWorkSpace/Skeleton/target/scala-2.9.1/classes/myApp/MyApplication$$anonfun$1.class)
+[debug] Modified external sources: Set()
+[debug] Modified binary dependencies: Set()
+[debug] Initial directly invalidated sources: Set(/Users/samuelmeasho/Documents/ScalaWorkSpace/Skeleton/src/main/scala/ourSkeleton/MyApplication.scala)
+[debug] 
+[debug] Sources indirectly invalidated by:
+[debug] 	product: Set(/Users/samuelmeasho/Documents/ScalaWorkSpace/Skeleton/src/main/scala/ourSkeleton/MyApplication.scala)
+[debug] 	binary dep: Set()
+[debug] 	external source: Set()
+[debug] Initially invalidated: Set(/Users/samuelmeasho/Documents/ScalaWorkSpace/Skeleton/src/main/scala/ourSkeleton/MyApplication.scala)
+[info] Compiling 1 Scala source to /Users/samuelmeasho/Documents/ScalaWorkSpace/Skeleton/target/scala-2.9.1/classes...
+[debug] Interfacing (CompilerInterface) with Scala compiler version 2.9.1.final
+[debug] Calling Scala compiler with arguments  (CompilerInterface):
+[debug] 	-d
+[debug] 	/Users/samuelmeasho/Documents/ScalaWorkSpace/Skeleton/target/scala-2.9.1/classes
+[debug] 	-bootclasspath
+[debug] 	/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar:/Users/samuelmeasho/.sbt/boot/scala-2.9.1/lib/scala-library.jar
+[debug] 	-classpath
+[debug] 	/Users/samuelmeasho/Documents/ScalaWorkSpace/Skeleton/target/scala-2.9.1/classes:/Users/samuelmeasho/Documents/ScalaWorkSpace/Skeleton/lib/servlet-api-3.0.20100224.jar:/Users/samuelmeasho/.ivy2/cache/com.twitter/util-core_2.9.1/jars/util-core_2.9.1-1.12.8.jar:/Users/samuelmeasho/.ivy2/cache/com.twitter/util-eval_2.9.1/jars/util-eval_2.9.1-1.12.8.jar:/Users/samuelmeasho/.sbt/boot/scala-2.9.1/lib/scala-compiler.jar:/Users/samuelmeasho/.ivy2/cache/org.squeryl/squeryl_2.9.1/jars/squeryl_2.9.1-0.9.5-RC1.jar:/Users/samuelmeasho/.ivy2/cache/cglib/cglib-nodep/jars/cglib-nodep-2.2.jar:/Users/samuelmeasho/.ivy2/cache/com.h2database/h2/jars/h2-1.2.127.jar:/Users/samuelmeasho/.ivy2/cache/org.scala-lang/scalap/jars/scalap-2.9.1.jar:/Users/samuelmeasho/.ivy2/cache/httpunit/httpunit/jars/httpunit-1.7.jar:/Users/samuelmeasho/.ivy2/cache/javax.servlet/servlet-api/jars/servlet-api-2.3.jar:/Users/samuelmeasho/.ivy2/cache/jtidy/jtidy/jars/jtidy-4aug2000r7-dev.jar:/Users/samuelmeasho/.ivy2/cache/rhino/js/jars/js-1.7R2.jar:/Users/samuelmeasho/.ivy2/cache/org.scribe/scribe/jars/scribe-1.3.0.jar:/Users/samuelmeasho/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.4.jar
+[debug] 	/Users/samuelmeasho/Documents/ScalaWorkSpace/Skeleton/src/main/scala/ourSkeleton/MyApplication.scala
+[warn] there were 3 unchecked warnings; re-run with -unchecked for details
+[warn] one warning found
+[debug] 	Invalidated direct: Set()
+[debug] Incrementally invalidated: Set()

@@ -1,0 +1,248 @@
+04-28 10:13:20 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "CLIENT" not found; SQL statement:
+drop table Client [42102-127]
+04-28 10:13:20 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "PRODUCT" not found; SQL statement:
+drop table Product [42102-127]
+04-28 10:13:20 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "CART" not found; SQL statement:
+drop table Cart [42102-127]
+04-30 17:21:32 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "USER" not found; SQL statement:
+insert into User (name, email, pass) values (?,?,?) [42102-127]
+04-30 17:21:32 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "USER" not found; SQL statement:
+insert into User (name, email, pass) values (?,?,?) [42102-127]
+04-30 17:23:07 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "USER" not found; SQL statement:
+drop table User [42102-127]
+04-30 17:23:07 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "MESSAGE" not found; SQL statement:
+drop table Message [42102-127]
+04-30 17:26:29 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "USER" already exists; SQL statement:
+create table User (
+    name varchar(128) not null,
+    email varchar(128) not null,
+    id bigint not null primary key auto_increment,
+    pass varchar(128) not null
+  ) [42101-127]
+05-03 19:46:33 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "USER" not found; SQL statement:
+drop table User [42102-127]
+05-03 19:46:33 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "MESSAGE" not found; SQL statement:
+drop table Message [42102-127]
+05-04 03:24:56 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "ACCOUNT" not found; SQL statement:
+drop table Account [42102-127]
+05-04 03:24:56 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "MOVEMENT" not found; SQL statement:
+drop table Movement [42102-127]
+05-06 19:44:05 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "USER" not found; SQL statement:
+drop table User [42102-127]
+05-06 19:44:05 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "MESSAGE" not found; SQL statement:
+drop table Message [42102-127]
+05-06 23:12:40 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: NULL not allowed for column "SUBJECT"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90006-127]
+05-06 23:14:00 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: NULL not allowed for column "SUBJECT"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90006-127]
+05-07 00:16:34 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "XMESSAGE[*] "; SQL statement:
+xMESSAGE [42000-166]
+05-07 01:14:34 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(helloooooo,Mon May 07 01:11:07 CEST 2012),Mon May 07 01:14:26 CEST 2012),Mon May 07 01:14:3... (139)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 01:21:40 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(nnananannanan,Mon May 07 01:14:51 CEST 2012),Mon May 07 01:14:51 CEST 2012),Mon May 07 01:2... (142)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 01:24:12 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(nnananannanan,Mon May 07 01:14:51 CEST 2012),Mon May 07 01:14:51 CEST 2012),Mon May 07 01:2... (142)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 01:25:57 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(nnananannanan,Mon May 07 01:14:51 CEST 2012),Mon May 07 01:14:51 CEST 2012),Mon May 07 01:2... (142)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 01:27:29 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "MESSAGE" not found; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [42102-127]
+05-07 01:27:29 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "MESSAGE" not found; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [42102-127]
+05-07 01:27:32 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "MESSAGE" not found; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [42102-127]
+05-07 01:27:32 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "MESSAGE" not found; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [42102-127]
+05-07 01:27:36 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "MESSAGE" not found; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [42102-127]
+05-07 01:27:36 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "MESSAGE" not found; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [42102-127]
+05-07 01:27:40 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "MESSAGE" not found; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [42102-127]
+05-07 01:27:40 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "MESSAGE" not found; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [42102-127]
+05-07 01:28:19 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Table "MESSAGE" not found; SQL statement:
+drop table Message [42102-127]
+05-07 10:53:39 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(dfghjk,Mon May 07 01:31:01 CEST 2012),Mon May 07 10:49:53 CEST 2012),Mon May 07 10:53:26 CE... (135)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:00:01 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(hello,Mon May 07 10:54:49 CEST 2012),Mon May 07 10:59:15 CEST 2012),Mon May 07 10:59:55 CES... (134)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:01:13 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(hello,Mon May 07 10:54:49 CEST 2012),Mon May 07 10:59:15 CEST 2012),Mon May 07 11:01:04 CES... (134)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:01:24 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(hello,Mon May 07 10:54:49 CEST 2012),Mon May 07 10:59:15 CEST 2012),Mon May 07 11:01:04 CES... (134)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:01:30 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(hello,Mon May 07 10:54:49 CEST 2012),Mon May 07 10:59:15 CEST 2012),Mon May 07 11:01:04 CES... (134)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:01:41 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(hello,Mon May 07 10:54:49 CEST 2012),Mon May 07 10:59:15 CEST 2012),Mon May 07 11:01:04 CES... (134)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:03:18 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(hello,Mon May 07 10:54:49 CEST 2012),Mon May 07 10:59:15 CEST 2012),Mon May 07 11:03:11 CES... (134)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:04:12 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(hello,Mon May 07 10:54:49 CEST 2012),Mon May 07 10:59:15 CEST 2012),Mon May 07 11:04:00 CES... (134)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:04:55 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(hello,Mon May 07 10:54:49 CEST 2012),Mon May 07 10:59:15 CEST 2012),Mon May 07 11:04:45 CES... (134)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:06:33 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(hello,Mon May 07 10:54:49 CEST 2012),Mon May 07 10:59:15 CEST 2012),Mon May 07 11:06:27 CES... (134)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:16:38 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(hi,Mon May 07 11:12:28 CEST 2012),Mon May 07 11:13:14 CEST 2012),Mon May 07 11:16:30 CEST 2... (131)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:17:37 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(hi,Mon May 07 11:12:28 CEST 2012),Mon May 07 11:13:14 CEST 2012),Mon May 07 11:17:24 CEST 2... (131)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:19:02 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(hi,Mon May 07 11:12:28 CEST 2012),Mon May 07 11:13:14 CEST 2012),Mon May 07 11:17:24 CEST 2... (131)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:19:14 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(hi,Mon May 07 11:12:28 CEST 2012),Mon May 07 11:13:14 CEST 2012),Mon May 07 11:17:24 CEST 2... (131)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:20:57 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(hi,Mon May 07 11:12:28 CEST 2012),Mon May 07 11:13:14 CEST 2012),Mon May 07 11:20:49 CEST 2... (131)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:25:27 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(hi,Mon May 07 11:12:28 CEST 2012),Mon May 07 11:13:14 CEST 2012),Mon May 07 11:25:13 CEST 2... (131)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:31:00 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(,Mon May 07 11:25:42 CEST 2012),Mon May 07 11:27:49 CEST 2012),Mon May 07 11:30:50 CEST 201... (129)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:31:10 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(,Mon May 07 11:25:42 CEST 2012),Mon May 07 11:27:49 CEST 2012),Mon May 07 11:30:50 CEST 201... (129)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:35:20 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(,Mon May 07 11:31:16 CEST 2012),Mon May 07 11:32:45 CEST 2012),Mon May 07 11:35:13 CEST 201... (129)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:35:27 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(,Mon May 07 11:31:16 CEST 2012),Mon May 07 11:32:45 CEST 2012),Mon May 07 11:35:13 CEST 201... (129)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:35:29 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(,Mon May 07 11:31:16 CEST 2012),Mon May 07 11:32:45 CEST 2012),Mon May 07 11:35:13 CEST 201... (129)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:35:31 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(,Mon May 07 11:31:16 CEST 2012),Mon May 07 11:32:45 CEST 2012),Mon May 07 11:35:13 CEST 201... (129)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:35:34 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(,Mon May 07 11:31:16 CEST 2012),Mon May 07 11:32:45 CEST 2012),Mon May 07 11:35:13 CEST 201... (129)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:44:21 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(hello mammammamama,Mon May 07 11:35:43 CEST 2012),Mon May 07 11:40:33 CEST 2012),Mon May 07... (147)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 11:45:29 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(hello mammammamama,Mon May 07 11:35:43 CEST 2012),Mon May 07 11:40:33 CEST 2012),Mon May 07... (147)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 12:46:26 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(how are you?,Mon May 07 12:29:52 CEST 2012),Mon May 07 12:31:47 CEST 2012),Mon May 07 12:45... (141)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 12:46:52 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(how are you?,Mon May 07 12:29:52 CEST 2012),Mon May 07 12:31:47 CEST 2012),Mon May 07 12:45... (141)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 12:47:34 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(how are you?,Mon May 07 12:29:52 CEST 2012),Mon May 07 12:31:47 CEST 2012),Mon May 07 12:45... (141)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 13:09:11 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(how are you,Mon May 07 13:03:58 CEST 2012),Mon May 07 13:08:28 CEST 2012),Mon May 07 13:08:... (140)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 13:09:58 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(how are you,Mon May 07 13:03:58 CEST 2012),Mon May 07 13:08:28 CEST 2012),Mon May 07 13:09:... (140)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 13:10:24 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(how are you,Mon May 07 13:03:58 CEST 2012),Mon May 07 13:08:28 CEST 2012),Mon May 07 13:09:... (140)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 13:11:39 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(how are you,Mon May 07 13:03:58 CEST 2012),Mon May 07 13:08:28 CEST 2012),Mon May 07 13:11:... (140)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 13:12:14 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(how are you,Mon May 07 13:03:58 CEST 2012),Mon May 07 13:08:28 CEST 2012),Mon May 07 13:11:... (140)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 13:14:05 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(how are you,Mon May 07 13:03:58 CEST 2012),Mon May 07 13:08:28 CEST 2012),Mon May 07 13:13:... (140)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 13:23:09 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(how are you,Mon May 07 13:03:58 CEST 2012),Mon May 07 13:08:28 CEST 2012),Mon May 07 13:22:... (140)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 13:23:21 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(how are you,Mon May 07 13:03:58 CEST 2012),Mon May 07 13:08:28 CEST 2012),Mon May 07 13:22:... (140)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-07 16:46:07 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(how are you,Mon May 07 13:03:58 CEST 2012),Mon May 07 13:08:28 CEST 2012),Mon May 07 16:45:... (140)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-13 01:06:04 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(,Sun May 13 00:59:19 CEST 2012),Sun May 13 01:05:04 CEST 2012),Sun May 13 01:05:51 CEST 201... (129)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-13 01:07:36 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(,Sun May 13 00:59:19 CEST 2012),Sun May 13 01:05:04 CEST 2012),Sun May 13 01:05:51 CEST 201... (129)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-13 01:07:52 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(,Sun May 13 00:59:19 CEST 2012),Sun May 13 01:05:04 CEST 2012),Sun May 13 01:07:44 CEST 201... (129)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-13 01:25:57 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(,Sun May 13 00:59:19 CEST 2012),Sun May 13 01:05:04 CEST 2012),Sun May 13 01:07:44 CEST 201... (129)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-13 01:33:35 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(,Sun May 13 00:59:19 CEST 2012),Sun May 13 01:05:04 CEST 2012),Sun May 13 01:33:19 CEST 201... (129)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-13 01:33:46 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(,Sun May 13 00:59:19 CEST 2012),Sun May 13 01:05:04 CEST 2012),Sun May 13 01:33:19 CEST 201... (129)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-13 01:44:32 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(,Sun May 13 01:33:53 CEST 2012),Sun May 13 01:37:31 CEST 2012),Sun May 13 01:44:25 CEST 201... (129)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-13 01:46:07 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(,Sun May 13 01:33:53 CEST 2012),Sun May 13 01:37:31 CEST 2012),Sun May 13 01:46:06 CEST 201... (129)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-13 01:46:15 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(,Sun May 13 01:33:53 CEST 2012),Sun May 13 01:37:31 CEST 2012),Sun May 13 01:46:06 CEST 201... (129)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-13 01:46:24 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(,Sun May 13 01:33:53 CEST 2012),Sun May 13 01:37:31 CEST 2012),Sun May 13 01:46:06 CEST 201... (129)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-13 01:47:31 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(,Sun May 13 01:33:53 CEST 2012),Sun May 13 01:37:31 CEST 2012),Sun May 13 01:46:06 CEST 201... (129)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-13 01:47:42 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(,Sun May 13 01:33:53 CEST 2012),Sun May 13 01:37:31 CEST 2012),Sun May 13 01:47:35 CEST 201... (129)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-13 01:51:10 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(,Sun May 13 01:33:53 CEST 2012),Sun May 13 01:37:31 CEST 2012),Sun May 13 01:50:54 CEST 201... (129)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
+05-13 02:32:37 jdbc[2]: SQLException
+org.h2.jdbc.JdbcSQLException: Value too long for column "MESSAGE VARCHAR(128) NOT NULL": "'MessageDate(MessageDate(MessageDate(,Sun May 13 02:31:28 CEST 2012),Sun May 13 02:31:53 CEST 2012),Sun May 13 02:32:30 CEST 201... (129)"; SQL statement:
+insert into Message (user_id, message, user_name) values (?,?,?) [90005-127]
