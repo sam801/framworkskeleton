@@ -1,88 +1,82 @@
 @CHARSET "UTF-8";
 
-
 /* ----------------------------BODY------------------------------------------  */
 body {
-	background-color:white;
+	background-color: lightgray;
 	min-height: 500px;
 	width: 1200px;
 	margin: 0 auto;
 	background-attachment: fixed;
-	
 }
-
 
 /* ----------------------------HEARDER------------------------------------------  */
 header {
-	
 	width: 1200px;
 	height: 100px;
-	color:green;
+	color: black;
 	margin: 0 auto;
-	text-align:center;
-	padding:0px;
-	
+	text-align: center;
+	padding: 0px;
 }
-
-
 
 /* ----------------------------SECTION------------------------------------------  */
 section {
-	min-height:400px;
+	min-height: 400px;
 	width: 1200px;
 	margin: 0 auto;
 }
 
-
 /* ----------------------------Article------------------------------------------  */
 article {
-	float:left;
-	min-heigh:400px;
-	width:600px;
-	color:white;
+	float: left;
+	min-heigh: 400px;
+	width: 600px;
+	color: rgb(21, 21, 22);
 	margin: 0 auto;
 }
 
 /* ----------------------------ASIDE------------------------------------------  */
-
 aside {
 	float: right;
-	width:475px;
+	width: 475px;
 	margin: 0 auto;
 }
 
-
 /* --------------------------- FOOTER-----------------------------------------  */
-
 footer {
 	margin: 0 auto;
 	width: 1200px;
-	text-align:center;
-	
+	text-align: center;
 }
 
-
 /* --------------------------- NAVIGATOR-----------------------------------------  */
+nav ul  li {
+	display: inline;
+	padding: 9px 68px 5px 117px;
+}
 
-nav ul  li  { 
-		
-        display:inline;
-        padding:9px 68px 5px 117px;
-       
-       
-  }
- 
- p{
- color: green;
- } 
-  
- h2 {
-  color:green;
- }
- #myImage
- {
-   width:300px;
-   height:150px;
-   margin-top:75px;
- }
- 
+A:link {
+	color: blue;
+}
+
+A:visited {
+	COLOR: blue;
+}
+
+A:hover {
+	COLOR: #CE0EDF;
+}
+
+p {
+	color: rgb(17, 155, 12);
+}
+
+h2 {
+	color: black;
+}
+
+#myImage {
+	width: 300px;
+	height: 150px;
+	margin-top: 75px;
+}
