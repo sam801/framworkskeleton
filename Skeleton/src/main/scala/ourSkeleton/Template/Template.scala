@@ -1,4 +1,4 @@
-package myApp.Template
+package ourSkeleton.Template
 import javax.servlet.http._
 import scala.xml._
 
