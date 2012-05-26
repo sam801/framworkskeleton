@@ -2,7 +2,7 @@
  * @author Fatemeh Chegini
  * @author Samuel Measho
  */
-package myApp
+package ourSkeleton
 import javax.servlet.http._
 import javax.servlet.ServletConfig
 import javax.servlet.ServletContext
@@ -31,8 +31,8 @@ import org.scribe.builder._
 import org.scribe.builder.api._
 import org.scribe.model._
 import org.scribe.oauth._
-import myApp.routing._
-import myApp.Template._
+import ourSkeleton.routing._
+import ourSkeleton.Template._
 import scala.util.parsing.json.JSON
 class MyApplication extends HttpServlet {
 
@@ -40,7 +40,7 @@ class MyApplication extends HttpServlet {
   /**
    *  Creating an object of Routing and Tempate class for later uses.
    */
-  val routing = new Routing()
+  val routing =  new Routing()
   val template = new Template()
 
   override def init(config: ServletConfig) {

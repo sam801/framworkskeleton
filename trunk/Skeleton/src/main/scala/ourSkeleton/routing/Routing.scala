@@ -2,7 +2,7 @@
 * @author Fatima Chegini
 * @author Samuel Measho
  */
-package myApp.routing
+package ourSkeleton.routing
 
 import javax.servlet.http._
 import javax.servlet.ServletConfig
