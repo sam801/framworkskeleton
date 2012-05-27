@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<surround with="index.html" at="here">
-<div class="code">
- <p> The code will be hosted in the atelier server!!</p>		
- </div>
-</surround>
