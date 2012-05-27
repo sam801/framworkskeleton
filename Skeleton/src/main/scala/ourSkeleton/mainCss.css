@@ -2,11 +2,11 @@
 
 /* ----------------------------BODY------------------------------------------  */
 body {
-	background-color: lightgray;
+	background-image:
+		url(http://www.freecsstemplates.org/previews/woodcrafting/images/wrapper-bg.jpg);
 	min-height: 500px;
 	width: 1200px;
 	margin: 0 auto;
-	background-attachment: fixed;
 }
 
 /* ----------------------------HEARDER------------------------------------------  */
@@ -17,11 +17,12 @@ header {
 	margin: 0 auto;
 	text-align: center;
 	padding: 0px;
+	font-family: arial, verdana, sans-serif;
 }
 
 /* ----------------------------SECTION------------------------------------------  */
 section {
-	min-height: 400px;
+	min-height: 500px;
 	width: 1200px;
 	margin: 0 auto;
 }
@@ -29,10 +30,11 @@ section {
 /* ----------------------------Article------------------------------------------  */
 article {
 	float: left;
-	min-heigh: 400px;
+	min-height: 500px;
 	width: 600px;
 	color: rgb(21, 21, 22);
 	margin: 0 auto;
+	
 }
 
 /* ----------------------------ASIDE------------------------------------------  */
@@ -40,6 +42,7 @@ aside {
 	float: right;
 	width: 475px;
 	margin: 0 auto;
+	min-height: 500px;
 }
 
 /* --------------------------- FOOTER-----------------------------------------  */
@@ -53,14 +56,16 @@ footer {
 nav ul  li {
 	display: inline;
 	padding: 9px 68px 5px 117px;
+	font-size: 26px;
+	font-family: arial, verdana, sans-serif;
 }
 
 A:link {
-	color: blue;
+	color: black;
 }
 
 A:visited {
-	COLOR: blue;
+	COLOR: black;
 }
 
 A:hover {
@@ -68,15 +73,30 @@ A:hover {
 }
 
 p {
-	color: rgb(17, 155, 12);
+	color: black;
+	font-family: arial, verdana, sans-serif;
+	font-size:19px;
 }
 
 h2 {
 	color: black;
 }
 
+#link {
+	font-size: 17px;
+	font-family: arial, verdana, sans-serif;
+}
+
 #myImage {
 	width: 300px;
 	height: 150px;
 	margin-top: 75px;
+}
+
+ol{
+	font-size:22px;
+}
+
+#divButton{
+	padding: 10 24 9 28;
 }

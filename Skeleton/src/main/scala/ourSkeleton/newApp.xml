@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<surround with="index.html" at="here">
+<div class="newApp">
+ <p> Here are the necessary steps to create an application using our framework</p>
+ </div>
+</surround>
