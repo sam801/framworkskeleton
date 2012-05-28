@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<surround with="index.html" at="here">
+<div class="code">
+ <h2> Getting Started </h2>
+</div>
+<ol>
+  <li><a href="http://localhost:8080/newApp">Creating a new application </a></li>
+  <li><a href="http://localhost:8080/anatomy">Anatomy of Our framework </a></li>
+  <li><a href="http://localhost:8080/ide">Setting-up your preferred IDE </a></li>
+  <li><a href="http://localhost:8080/sampleApp">Sample applications </a></li>
+</ol>
+			
+</surround>
