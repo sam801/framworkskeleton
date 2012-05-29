@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<surround with="index.html" at="here">
+<div class="newApp">
+<h2> Features of this framework </h2>
+</div>
+
+<div>
+<ol>
+<li><a href="http://localhost:8080/template">Template</a></li>
+<li><a href="http://localhost:8080/form">Form</a></li>
+<li><a href="http://localhost:8080/routing">Routing</a></li>
+<li><a href="http://localhost:8080/persistance">Persistance</a></li>
+<li><a href="http://localhost:8080/sessionfw">Session</a></li>
+</ol>
+</div>
+
+
+
+
+<div class="newApp">
+<a href="http://localhost:8080/anatomy">Next</a>
+</div>
+</surround>

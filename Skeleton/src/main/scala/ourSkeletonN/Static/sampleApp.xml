@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<surround with="index.html" at="here">
+<h2> Sample Application </h2>
+<p> You can download sample application which is developed by this framework form the link below.</p>
+<div class="sample">
+<a href="https://framworkskeleton.googlecode.com/svn/trunk/">Sample Application</a>
+</div>
+<div class="routing">
+<a href="http://localhost:8080/features">Back</a>
+</div>
+</surround>

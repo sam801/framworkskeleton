@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<surround with="index.html" at="here">
+<div class="newApp">
+<h2> Routing </h2>
+<p>First instantiation of Routing class object must be done in order to us it features</p> 
+<div class ="per">  
+   <div class="zero"> val routing = new Routing()</div>
+  </div>
+  <p>Then you can add your routing in the hashmap as follows inside your main class.</p> 
+  <div class ="per">  
+   <div class="zero">routing.addRoute("/", main)</div>
+  
+  </div>
+</div>
+<div class="routing">
+<a href="http://localhost:8080/persistance">Next</a>
+</div>
+
+
+</surround>

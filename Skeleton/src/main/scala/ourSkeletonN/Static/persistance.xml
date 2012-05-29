@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<surround with="index.html" at="here">
+<div class="newApp">
+<h2> Persistance </h2>
+</div>
+<div class="persistance">
+<p> Connecting  to the Database using the following code. </p>
+  
+ <div class ="per">  
+   <div class="zero"> Class.forName("org.h2.Driver")</div>
+   <div id="one"> SessionFactory.concreteFactory = Some(() =></div>
+    
+   <div class="two"> Session.create( </div>
+   <div class="three">     java.sql.DriverManager.getConnection("jdbc:h2:" + System.getProperty("user.dir") + "/test;AUTO_SERVER=TRUE", "", ""),</div>
+   <div class="three">    new H2Adapter)) </div>
+        
+  </div>
+  <p>Instantiation of persistence class use its features.</p>
+  <div class="four"> 
+     val persistance = new Persistence()
+  </div>
+  
+  <p>Then you can create the schema as follows(Using squeryl)</p>
+  <div class="per">
+ 	 <div class="zero">class User(val firstName: String, </div>
+ 	 <div class="two">val lastName: String,</div>
+	 <div class="two"> val email: Option[String]) extends KeyedEntity[Long] {</div>
+	 <div class="one"> def this() = this("", "", Some(""))</div>
+	 valid=0L }
+	 </div>
+	 
+	<p>Creating database(Using squeryl)</p> 
+	<div class="per">
+	<div class="zero">object Forum extends org.squeryl.Schema {</div>
+	<div class="two">val forum_users = table[User]</div>
+  	
+}
+</div>
+<div class="routing">
+<a href="http://localhost:8080/sessionfw">Next</a>
+</div>
+
+ </div>
+
+</surround>
