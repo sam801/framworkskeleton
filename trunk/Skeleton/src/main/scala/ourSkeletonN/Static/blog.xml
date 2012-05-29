@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<surround with="index.html" at="here">
+	 	<div class="signUpForm">
+			<p>If you want to get notification  regarding this framework through e-mail,please sign up!</p>
+		</div>
+        
+        <div class="signUpForm">
+        	<form method="post" handler="Register(firstName,lastName,email,password)">
+        	<div class="row">
+          	  <div class="labels">
+          	  	First Name: <font color="red">*</font>
+          	  </div>
+             <div class="row">
+             	<input  class="txtInputs" type="text" name="firstName"/>
+             </div>
+       		</div>
+        	<div class="row">
+            	<div class="labels">
+            		Last Name: <font color="red">*</font>
+            	</div>
+            	 <div class="row">
+            	 	<input  class="txtInputs" type="text" name="lastName"/>
+            	 </div>
+            </div>
+            	 
+         	<div class="row">
+            	<div class="labels">
+            		Email:<font color="red">*</font>
+            	 </div>
+           		 <div class="row">
+           		 	 <input class="txtInputs" type="text" name="email" />
+           		</div>
+			</div>    
+			<div class="row">
+            	<div class="labels">
+            		Password: <font color="red">*</font>
+            	</div>
+             	<div class="row">
+             		<input  class="txtInputs" type="password" name="password" />
+             </div>
+       		</div>
+          	 <div class="row" id="divButton" >
+				<input type="submit" value="Sign-Up"/>
+			</div>
+
+        </form>
+        </div>
+</surround>

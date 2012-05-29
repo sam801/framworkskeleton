@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<surround with="index.html" at="here">
+<div class="newApp">
+<h2> Form </h2>
+<p> You can the sample application how forms are done in details</p>
+</div>
+<div class="form">
+<a href="http://localhost:8080/routing">Next</a>
+</div>
+
+</surround>

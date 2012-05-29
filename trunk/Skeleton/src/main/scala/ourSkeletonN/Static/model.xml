@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<surround with="index.html" at="here">
+<div class="code">
+ <p> Here is the model of the framework</p>			
+ </div>
+</surround>
