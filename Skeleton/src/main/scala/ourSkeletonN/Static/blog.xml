@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <surround with="index.html" at="here">
-	 	<div class="signUpForm">
+	 	<div class="imp">
 			<p>If you want to get notification  regarding this framework through e-mail,please sign up!</p>
-		</div>
+		
         
         <div class="signUpForm">
         	<form method="post" handler="Register(firstName,lastName,email,password)">
@@ -44,5 +44,6 @@
 			</div>
 
         </form>
+        </div>
         </div>
 </surround>

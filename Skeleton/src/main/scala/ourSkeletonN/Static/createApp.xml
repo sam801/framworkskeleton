@@ -1,22 +1,18 @@
 <?xml version="1.0"?>
 <surround with="index.html" at="here">
-<div class="newApp">
 <h2> Creating New Application</h2>
-<p>Firt you have download the code by going to downloads from the google.code.com repository.</p> 
-  <p>Then follow the following commands in terminal.</p>
-  <ol>
+<div class="imp">
+<p>First you have download the code by going to downloads and then follow the following commands in terminal.</p> 
+ <div class="createApp">
+  <ol class="ol">
      <li> ./sbt  </li>
      <li> compile </li>
      <li> container:start </li>
      <li> ~aux-compile </li>
      <li> Then test from your browser (http://localhost:8080/), if you get a hello world, your application is created successfully.</li>
      </ol>   
-  
-
-</div>
-<div class="routing">
 <a href="http://localhost:8080/sampleApp">Next</a>
 </div>
-
+</div>
 
 </surround>
