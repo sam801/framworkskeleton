@@ -18,12 +18,12 @@ class Template {
    * @param filename The file to be displayed
    */
   def loadPage(fileName: String): NodeSeq = {
-    val basePage = scala.io.Source.fromFile("src/main/scala/ourSkeletonN/" + fileName).getLines.mkString
+    val basePage = scala.io.Source.fromFile("src/main/scala/ourSkeletonN/View/" + fileName).getLines.mkString
     return XML.loadString(basePage)
   }
   
   def loadCss(filePath: String) = {
-    val basePage = scala.io.Source.fromFile("src/main/scala/ourSkeletonN/" + filePath).getLines.mkString
+    val basePage = scala.io.Source.fromFile("src/main/scala/ourSkeletonN/Public/Stylesheet/" + filePath).getLines.mkString
       
     basePage
   }
@@ -32,15 +32,22 @@ class Template {
       
     basePage
   }
-
-   
+   def loadBinaryFile(filePath:String) = {
+    val binary = scala.io.Source.fromFile("src/main/scala/ourSkeletonN/Public/Image/" + filePath)(scala.io.Codec.ISO8859).map(_.toByte).toArray
+    binary
+   }
+  
+//   def scalaStream(filePath:String) { 
+//    val in4 = this.getClass().getClassLoader().getResourceAsStream("src/main/scala/ourSkeletonN/Public/Image/" + filePath) 
+//    var stream = Iterator continually in4.read takeWhile (-1 !=) map (_.toByte) toArray 
+//  } 
 
   /**
    * Function that loads a template to be displayed
    * @param fileName The file containing the template to be used
    */
   def getDefaultTemplate(fileName: String) = {
-    val surround = scala.io.Source.fromFile("src/main/scala/ourSkeletonN/" + fileName).getLines.mkString
+    val surround = scala.io.Source.fromFile("src/main/scala/ourSkeletonN/View/" + fileName).getLines.mkString
     XML.loadString(surround)
   }
 
