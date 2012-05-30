@@ -2,6 +2,7 @@
 <surround with="index.html" at="here">
 <div class="newApp">
 <h2> Template</h2>
+<div class="imp">
 <p>First,we need an object of the Template class in order to use its features</p> 
 <div class ="per">  
    <div class="zero"> val template = new Template()</div>
@@ -13,11 +14,7 @@
    <div class="two"> return XML.loadString(basePage)</div>
   }
   </div>
- </div>
-
-<div class="newApp">
-<a href="http://localhost:8080/form">Next</a>
-</div>
-
-
+ <a href="http://localhost:8080/form">Next</a>
+  </div>
+  </div>
 </surround>

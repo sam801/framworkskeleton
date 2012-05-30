@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <surround with="index.html" at="here">
 <h2>Settting up your Perferred IDE</h2>
+<div class="imp">
 <p> Here are the necessary steps to create a project in Eclipse. </p>
 <ol>
 <li> After downloading the framework, you have to import to your workspace with
@@ -23,7 +24,6 @@
      	</ol>
 </ol> 
 </ol>
-<div class="ide">
 <a href="http://localhost:8080/createApp">Next</a>
 </div>
 </surround>

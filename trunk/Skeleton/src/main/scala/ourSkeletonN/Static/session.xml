@@ -3,13 +3,11 @@
 <div class="newApp">
 <h2> Session </h2>
 </div>
-
- <p>First instantiation of SessionManagement class object must be done in order to us it features.</p> 
+<div class="imp">
+ <p id="p">First instantiation of SessionManagement class object must be done in order to us it features.</p> 
 <div class ="per">  
    <div class="zero"> val session = new Session()</div>
   </div>
-<div class="session">
-  <a href="http://localhost:8080/template">Back</a>
+ <a href="http://localhost:8080/template">Back</a>
  </div>
-
 </surround>

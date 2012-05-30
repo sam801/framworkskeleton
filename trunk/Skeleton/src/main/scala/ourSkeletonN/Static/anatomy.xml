@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
 <surround with="index.html" at="here">
  <h2>Anatomy of Our framework</h2>
+<div class="imp"> 
 <p> Here we will put the anatomy of the framework!!  </p>
 <div class="newApp">
 <a href="http://localhost:8080/ide">Next</a>
 </div>
-
+</div>
 </surround>
