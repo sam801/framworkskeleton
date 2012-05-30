@@ -34,6 +34,7 @@ import org.scribe.oauth._
 import ourSkeletonN.routing._
 import ourSkeletonN.Template._
 import ourSkeletonN.Persistance._
+import ourSkeletonN.SessionManagment._
 import scala.util.parsing.json.JSON
 class MyApplication extends HttpServlet {
 
@@ -44,6 +45,8 @@ class MyApplication extends HttpServlet {
   val routing = new Routing()
   val template = new Template()
   val persistance = new Persistence()
+  val session = new SessionManagement()
+  
   override def init(config: ServletConfig) {
     super.init(config)
 
@@ -54,23 +57,39 @@ class MyApplication extends HttpServlet {
     Session.create(
         java.sql.DriverManager.getConnection("jdbc:h2:" + System.getProperty("user.dir") + "/test;AUTO_SERVER=TRUE", "sa", "sa"),
         new H2Adapter))
-    routing.addRoute("/", main)
+    routing.addRoute("/", documentation)
     routing.addRoute("/documentation", documentation)
     routing.addRoute("/model", model)
     routing.addRoute("/download", download)
     routing.addRoute("/blog", blog)
-    routing.addRoute("/newApp", creatNewApp)
+    routing.addRoute("/features", features)
     routing.addRoute("/anatomy", anatomy)
     routing.addRoute("/ide", ide)
     routing.addRoute("/sampleApp", sampleApp)
     routing.addRoute("/downloadFw", downloadFw)
     routing.addRoute("/mainCss.css", css)
-
+    routing.addRoute("/session", session.justSession)
+    routing.addRoute("/template", templateFw)
+    routing.addRoute("/routing", routingFw)
+    routing.addRoute("/persistance", persistanceFw)
+    routing.addRoute("/sessionfw", sessionFw)
+    routing.addRoute("/form", formFw)
+    routing.addRoute("/createApp",createApp)
+    routing.addRoute("/session", session.justSession)
+   // routing.addRoute("/image", downloadImage)
     
   }
 
   override def service(req: HttpServletRequest, resp: HttpServletResponse) {
-
+    var currentContext = session.getCurrentContext
+    currentContext = session.newContext(req, resp, currentContext)
+    currentContext().session.setMaxInactiveInterval(10)
+    if(currentContext().session.isNew()){
+    
+    }
+  
+    
+    
     //Routing dispatch
     if (routing.tableDispatch(req, resp))
       return
@@ -113,6 +132,7 @@ class MyApplication extends HttpServlet {
     val html = prepareForm(xml)
     resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
   }
+  
   def css(req: HttpServletRequest, resp: HttpServletResponse) {
 
     val css = template.loadCss("mainCss.css")
@@ -128,8 +148,8 @@ class MyApplication extends HttpServlet {
 
   }
   
-  def creatNewApp(req: HttpServletRequest, resp: HttpServletResponse) = {
-    val xml = template.setUpTemplate("newApp.xml")
+  def features(req: HttpServletRequest, resp: HttpServletResponse) = {
+    val xml = template.setUpTemplate("features.xml")
     val html = prepareForm(xml)
     resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
   }
@@ -151,9 +171,48 @@ class MyApplication extends HttpServlet {
     val html = prepareForm(xml)
     resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
   }
-
   
+  
+  def createApp(req: HttpServletRequest, resp: HttpServletResponse) = {
+    val xml = template.setUpTemplate("createApp.xml")
+    val html = prepareForm(xml)
+    resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
+  }
   /*
+   * features 
+   */
+  
+  
+  def routingFw(req: HttpServletRequest, resp: HttpServletResponse) = {
+    val xml = template.setUpTemplate("routing.xml")
+    val html = prepareForm(xml)
+    resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
+  }
+  
+  def templateFw(req: HttpServletRequest, resp: HttpServletResponse) = {
+    val xml = template.setUpTemplate("template.xml")
+    val html = prepareForm(xml)
+    resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
+  }
+  
+  def persistanceFw(req: HttpServletRequest, resp: HttpServletResponse) = {
+    val xml = template.setUpTemplate("persistance.xml")
+    val html = prepareForm(xml)
+    resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
+  }
+  
+  def formFw(req: HttpServletRequest, resp: HttpServletResponse) = {
+    val xml = template.setUpTemplate("form.xml")
+    val html = prepareForm(xml)
+    resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
+  }
+  def sessionFw(req: HttpServletRequest, resp: HttpServletResponse) = {
+    val xml = template.setUpTemplate("session.xml")
+    val html = prepareForm(xml)
+    resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
+  }
+  
+ /*
   * register 
   */
 
