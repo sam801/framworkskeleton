@@ -4,57 +4,46 @@
 body {
 	background-color:white;
 	min-height: 500px;
-	width: 1200px;
+	width: 100%;
 	margin: 0 auto;
 }
 
 /* ----------------------------HEARDER------------------------------------------  */
 header {
-	width: 1200px;
+	width: 100%;
 	height: 100px;
-	color: black;
+	color: #7FFF00;
 	margin: 0 auto;
 	text-align: center;
 	padding: 2px;
+	background-color:#2E2E2D;
 	font-family: arial, verdana, sans-serif;
 }
 
 /* ----------------------------SECTION------------------------------------------  */
 section {
 	min-height: 550px;
-	width: 1200px;
+	width: 100%;
 	margin: 0 auto;
-}
-
-/* ----------------------------Article------------------------------------------  */
-article {
-	float: left;
-	min-height: 550px;
-	width: 600px;
-	color: rgb(21, 21, 22);
-	margin: 0 auto;
-	
-}
-
-/* ----------------------------ASIDE------------------------------------------  */
-aside {
-	float: right;
-	width: 475px;
-	margin: 0 auto;
-	min-height: 550px;
 }
 
 /* --------------------------- FOOTER-----------------------------------------  */
-footer {
+.footer {
 	margin: 0 auto;
-	width: 1200px;
+	width: 100%;
 	text-align: center;
+	background-color:#2E2E2D;
+	color:#7FFF00;
+	padding: 1 1 1 1;
 }
 
+.pfooter {
+	font:19px important;
+}
 /* --------------------------- NAVIGATOR-----------------------------------------  */
 nav ul  li {
 	display: inline;
-	padding: 9px 68px 5px 117px;
+	padding: 10px 74px 3px 169px;
 	font-size: 26px;
 	font-family: arial, verdana, sans-serif;
 	
@@ -63,6 +52,7 @@ nav ul  li {
 A:link {
 	color: black;
 	text-decoration: none;
+	font-size:20px;
 }
 
 A:visited {
@@ -76,28 +66,20 @@ A:hover {
 }
 
 p {
-	color: black;
 	font-family: arial, verdana, sans-serif;
-	font-size:19px;
+	font-size:18px;
+	font-weight: bold;.
+	padding: 0, 209;
 }
 
 h2 {
 	color: black;
+	padding:16px 118px 1px 206px;
 }
 
-#link {
-	font-size: 17px;
-	font-family: arial, verdana, sans-serif;
-}
-
-#myImage {
-	width: 300px;
-	height: 150px;
-	margin-top: 75px;
-}
-
-ol{
+.ol{
 	font-size:22px;
+	padding: -1 0 0 0;
 }
 
 #divButton{
@@ -111,7 +93,7 @@ ol{
 .zero{
 	padding:1px;
 }
-#one{
+.one{
 	padding: 1px 20px;
 }
 .two{
@@ -123,11 +105,14 @@ ol{
  
 
 .four{
-	  padding: 0 65	
+	  padding: 0 65;
 }
 
 
+.next{
+	padding: 0 0 0 210;
+}
 
-
-
+.imp{
+	padding:0 0 0 204;
 
