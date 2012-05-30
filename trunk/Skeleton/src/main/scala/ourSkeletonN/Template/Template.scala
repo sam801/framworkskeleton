@@ -22,18 +22,16 @@ class Template {
     return XML.loadString(basePage)
   }
   
-  def loadCss(filePath: String) = {
-    val basePage = scala.io.Source.fromFile("src/main/scala/ourSkeletonN/Public/Stylesheet/" + filePath).getLines.mkString
-      
+  def loadCss(fileName: String) = {
+    val basePage = scala.io.Source.fromFile("src/main/scala/ourSkeletonN/Public/Stylesheet/" + fileName).getLines.mkString
     basePage
   }
-   def loadJs(filePath: String) = {
-    val basePage = scala.io.Source.fromFile("src/main/scala/ourSkeletonN/" + filePath)(scala.io.Codec.ISO8859).toArray
-      
+   def loadJs(fileName: String) = {
+    val basePage = scala.io.Source.fromFile("src/main/scala/ourSkeletonN/" + fileName)(scala.io.Codec.ISO8859).toArray
     basePage
   }
    def loadBinaryFile(filePath:String) = {
-    val binary = scala.io.Source.fromFile("src/main/scala/ourSkeletonN/Public/Image/" + filePath)(scala.io.Codec.ISO8859).map(_.toByte).toArray
+    val binary = scala.io.Source.fromFile("src/main/scala/ourSkeletonN/" + filePath)(scala.io.Codec.ISO8859).map(_.toByte).toArray
     binary
    }
   
