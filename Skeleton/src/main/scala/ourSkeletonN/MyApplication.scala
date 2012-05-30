@@ -46,22 +46,21 @@ class MyApplication extends HttpServlet {
   val template = new Template()
   val persistance = new Persistence()
   val session = new SessionManagement()
-  
+
   override def init(config: ServletConfig) {
     super.init(config)
 
-    
     Class.forName("org.h2.Driver")
     SessionFactory.concreteFactory = Some(() =>
-    
-    Session.create(
+
+      Session.create(
         java.sql.DriverManager.getConnection("jdbc:h2:" + System.getProperty("user.dir") + "/test;AUTO_SERVER=TRUE", "sa", "sa"),
         new H2Adapter))
     routing.addRoute("/", documentation)
     routing.addRoute("/documentation", documentation)
-    routing.addRoute("/model", model)
+    routing.addRoute("/modules", module)
     routing.addRoute("/download", download)
-    routing.addRoute("/blog", blog)
+    routing.addRoute("/contact", contact)
     routing.addRoute("/features", features)
     routing.addRoute("/anatomy", anatomy)
     routing.addRoute("/ide", ide)
@@ -74,22 +73,19 @@ class MyApplication extends HttpServlet {
     routing.addRoute("/persistance", persistanceFw)
     routing.addRoute("/sessionfw", sessionFw)
     routing.addRoute("/form", formFw)
-    routing.addRoute("/createApp",createApp)
+    routing.addRoute("/createApp", createApp)
     routing.addRoute("/session", session.justSession)
-   // routing.addRoute("/image", downloadImage)
-    
+    routing.addRoute("/checking", checking)
   }
 
   override def service(req: HttpServletRequest, resp: HttpServletResponse) {
     var currentContext = session.getCurrentContext
     currentContext = session.newContext(req, resp, currentContext)
     currentContext().session.setMaxInactiveInterval(10)
-    if(currentContext().session.isNew()){
-    
+    if (currentContext().session.isNew()) {
+
     }
-  
-    
-    
+
     //Routing dispatch
     if (routing.tableDispatch(req, resp))
       return
@@ -109,14 +105,14 @@ class MyApplication extends HttpServlet {
     resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
   }
 
-  def blog(req: HttpServletRequest, resp: HttpServletResponse) = {
-    val xml = template.setUpTemplate("blog.xml")
+  def contact(req: HttpServletRequest, resp: HttpServletResponse) = {
+    val xml = template.setUpTemplate("contact.xml")
     val html = prepareForm(xml)
     resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
   }
 
-  def model(req: HttpServletRequest, resp: HttpServletResponse) = {
-    val xml = template.setUpTemplate("model.xml")
+  def module(req: HttpServletRequest, resp: HttpServletResponse) = {
+    val xml = template.setUpTemplate("module.xml")
     val html = prepareForm(xml)
     resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
   }
@@ -126,13 +122,13 @@ class MyApplication extends HttpServlet {
     val html = prepareForm(xml)
     resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
   }
-  
+
   def sampleApp(req: HttpServletRequest, resp: HttpServletResponse) = {
     val xml = template.setUpTemplate("sampleApp.xml")
     val html = prepareForm(xml)
     resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
   }
-  
+
   def css(req: HttpServletRequest, resp: HttpServletResponse) {
 
     val css = template.loadCss("mainCss.css")
@@ -147,32 +143,31 @@ class MyApplication extends HttpServlet {
     resp.setContentType("text/css")
 
   }
-  
+
   def features(req: HttpServletRequest, resp: HttpServletResponse) = {
     val xml = template.setUpTemplate("features.xml")
     val html = prepareForm(xml)
     resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
   }
-  
+
   def anatomy(req: HttpServletRequest, resp: HttpServletResponse) = {
     val xml = template.setUpTemplate("anatomy.xml")
     val html = prepareForm(xml)
     resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
   }
-  
+
   def ide(req: HttpServletRequest, resp: HttpServletResponse) = {
     val xml = template.setUpTemplate("ide.xml")
     val html = prepareForm(xml)
     resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
   }
-  
+
   def downloadFw(req: HttpServletRequest, resp: HttpServletResponse) = {
     val xml = template.setUpTemplate("ide.xml")
     val html = prepareForm(xml)
     resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
   }
-  
-  
+
   def createApp(req: HttpServletRequest, resp: HttpServletResponse) = {
     val xml = template.setUpTemplate("createApp.xml")
     val html = prepareForm(xml)
@@ -181,26 +176,25 @@ class MyApplication extends HttpServlet {
   /*
    * features 
    */
-  
-  
+
   def routingFw(req: HttpServletRequest, resp: HttpServletResponse) = {
     val xml = template.setUpTemplate("routing.xml")
     val html = prepareForm(xml)
     resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
   }
-  
+
   def templateFw(req: HttpServletRequest, resp: HttpServletResponse) = {
     val xml = template.setUpTemplate("template.xml")
     val html = prepareForm(xml)
     resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
   }
-  
+
   def persistanceFw(req: HttpServletRequest, resp: HttpServletResponse) = {
     val xml = template.setUpTemplate("persistance.xml")
     val html = prepareForm(xml)
     resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
   }
-  
+
   def formFw(req: HttpServletRequest, resp: HttpServletResponse) = {
     val xml = template.setUpTemplate("form.xml")
     val html = prepareForm(xml)
@@ -212,179 +206,12 @@ class MyApplication extends HttpServlet {
     resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
   }
   
- /*
-  * register 
-  */
-
-  def Register(name: String, last: String, email: String, pass: String) = {
-
-    var toReturn: Option[Long] = None
-
-    transaction {
-
-      var res = from(Forum.forum_users)(c =>
-        where(c.email === email)
-          select (c.id))
-
-      if (res != null)
-        toReturn = res.headOption
-
-    }
-
-    toReturn match {
-      case Some(id: Long) =>
-
-        repeatation
-      case _ =>
-        if ((name.isEmpty() || last.isEmpty() || email.isEmpty() || pass.isEmpty()) ||((name.isEmpty()) && ( last.isEmpty() && email.isEmpty() && pass.isEmpty()))) {
-        	fillUp
-        } else {
-
-          LogOut(name, last, email, pass)
-        }
-
-    }
-  }
-
-  //handler function for SignOut
-  def LogOut(name: String, last: String, email: String, pass: String) = {
-
-    transaction {
-      Forum.forum_users.insert(new User(name, last, email, pass))
-    }
-
-    <html>
-      <head>
-        <title>Home</title>
-        <link rel="stylesheet" type="text/css" href="mainCss.css"/>
-      </head>
-      <body>
-        <header>
-          <h1 id="welcome">Welcome To Our Framework</h1>
-        </header>
-        <nav>
-          <ul>
-            <li class="active" id="Documentation"><a href="http://localhost:8080/documentation">Documentation</a></li>
-            <li class="active" id="Model"><a href="http://localhost:8080/model">Model</a></li>
-            <li class="active" id="Blog"><a href="http://localhost:8080/blog">Blog</a></li>
-            <li class="active" id="Download"><a href="http://localhost:8080/download">Download</a></li>
-          </ul>
-        </nav>
-        <section>
-          <article>
-            <h1>Congratulations { name }</h1>
-            <h2>your registration is complete!</h2>
-          </article>
-          <aside>
-            <img id="myImage" src="http://www.lss.lu.unisi.ch/pictures/usi_partialview.jpg" alt="myImage"/>
-          </aside>
-        </section>
-        <footer>
-          <p>2011 fatima and samuel, Last Update!!</p>
-        </footer>
-      </body>
-    </html>
-  }
-
-  def repeatation = {
-
-    <html>
-      <head>
-        <title>Home</title>
-        <link rel="stylesheet" type="text/css" href="mainCss.css"/>
-      </head>
-      <body>
-        <header>
-          <h1 id="welcome">Welcome To Our Framework</h1>
-        </header>
-        <nav>
-          <ul>
-            <li class="active" id="Documentation"><a href="http://localhost:8080/documentation">Documentation</a></li>
-            <li class="active" id="Model"><a href="http://localhost:8080/model">Model</a></li>
-            <li class="active" id="Blog"><a href="http://localhost:8080/blog">Blog</a></li>
-            <li class="active" id="Download"><a href="http://localhost:8080/download">Download</a></li>
-          </ul>
-        </nav>
-        <section>
-          <article>
-            <h2>  This email is already reagistered!!</h2>
-          </article>
-          <aside>
-            <img id="myImage" src="http://www.lss.lu.unisi.ch/pictures/usi_partialview.jpg" alt="myImage"/>
-          </aside>
-        </section>
-        <footer>
-          <p>2011 fatima and samuel, Last Update!!</p>
-        </footer>
-      </body>
-    </html>
-  }
-
-  def fillUp = {
-
-    <html>
-      <head>
-        <title>Home</title>
-        <link rel="stylesheet" type="text/css" href="mainCss.css"/>
-      </head>
-      <body>
-        <header>
-          <h1 id="welcome">Welcome To Our Framework</h1>
-        </header>
-        <nav>
-          <ul>
-            <li class="active" id="Documentation"><a href="http://localhost:8080/documentation">Documentation</a></li>
-            <li class="active" id="Model"><a href="http://localhost:8080/model">Model</a></li>
-            <li class="active" id="Blog"><a href="http://localhost:8080/blog">Blog</a></li>
-            <li class="active" id="Download"><a href="http://localhost:8080/download">Download</a></li>
-          </ul>
-        </nav>
-        <section>
-          <article>
-            <h2> Fill the remaining fields and sign up again.(name.isEmpty() || last.isEmpty() || email.isEmpty() || pass.isEmpty()</h2>
-          </article>
-          <aside>
-            <img id="myImage" src="http://www.lss.lu.unisi.ch/pictures/usi_partialview.jpg" alt="myImage"/>
-          </aside>
-        </section>
-        <footer>
-          <p>2011 fatima and samuel, Last Update!!</p>
-        </footer>
-      </body>
-    </html>
-  }
-
+ def checking(req: HttpServletRequest, resp: HttpServletResponse){
   
-  def getAllUsers(req: HttpServletRequest, resp: HttpServletResponse) {
-
-    val xml = ListUsers
-    val html = prepareForm(xml)
-    resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))
-  }
-
-  //show all accounts
-  def ListUsers = {
-
-    <html>
-      <head>
-        <title>Accounts:</title>
-      </head>
-      <body>
-        <h3>All accounts</h3>
-        <table border="1">
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>password</th>
-          </tr>
-          {
-            persistance.getUsers
-
-          }
-        </table>
-      </body>
-    </html>
-  }
+     val xml = template.loadBinaryFile("socialNetwork.jpg")
+     print(xml)
+    
+ } 
 
   /**
    * Prepare the form
@@ -399,12 +226,9 @@ class MyApplication extends HttpServlet {
         case form: Elem if form.label == "form" =>
           val Some(handler) = form.attribute("handler")
           var Some(method) = form.attribute("method")
-
           // Make the handler and install in routeTable
           val (uri, f: HandlerFunction) = makeHandler(handler.text)
-
           routing.addRoute(uri, f)
-
           // Add an action to the form.
           form % Attribute(None, "action", Text(uri), Null)
         case n => n
