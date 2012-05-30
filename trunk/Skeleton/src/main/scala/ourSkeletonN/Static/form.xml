@@ -3,8 +3,30 @@
 
 <h2> Form </h2>
 <div class="imp">
-<p> You can the sample application how forms are done in details.</p>
-<a href="http://localhost:8080/routing">Next</a>
+<ul>
+<li> Form is done as follows, lets save the following code as templateLogin.xml</li>
+<div class="form">
+            <div class="one"> &lt;form method="post" handler="log(email,password)"&gt; </div>
+  			<div class="two"> &lt;div class="row"&gt; </div>
+            <div class="two"> &lt;div class="labels"> Email:&lt;/div&gt;</div>
+            <div class="two"> &lt;div class="row"&gt;&lt;input class="txtInputs" type="text" name="email"/&gt;</div>
+            &lt;/div&gt;
+            <div class="two"> &lt;div class="row"&gt; </div>
+            <div class="two"> &lt;div class="labels"> Password:&lt;/div&gt;</div>
+            <div class="two"> &lt;div class="row"&gt;&lt;input class="txtInputs" type="password" name="password"/&gt;</div>
+            &lt;/div&gt;
+ </div>  
+ <li> Then you have to pass this file to setUpTemplate() which creates the template.</li>
+            <div class="zero">def SignIn(req: HttpServletRequest, resp: HttpServletResponse) {</div>
+	        <div class="one">/* Session setup */</div>
+    		<div class="one">val xml = template.setUpTemplate("templateLogin.xml")</div>
+ <li> Finally the out put of the the setUpTemplate() is fed to prepareForm to create the desired form.</li>  		
+            <div class="one">val html = prepareForm(xml)</div>
+            <div class="one">resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))</div>
+    }
+ </ul>
+ </div>
+ <div class="imp">
+ <a href="http://localhost:8080/routing">Next</a>
 </div>
-
 </surround>
