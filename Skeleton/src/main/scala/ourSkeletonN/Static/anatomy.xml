@@ -2,7 +2,53 @@
 <surround with="index.html" at="here">
  <h2>Anatomy of Our framework</h2>
 <div class="imp"> 
-<p> Here we will put the anatomy of the framework!!  </p>
+<p> Here is the general anatomy of the framework.</p>
+<ul>
+<li> setting  </li>
+<li> lib  </li>
+<li> project </li>
+<li> src  </li>
+<ul>
+<li>main</li>
+<ul>
+<li> java  </li>
+<li> scala </li>
+<ul>
+
+<li> ourSkeletonN  </li>
+<ul>
+<li>pesistance </li>
+<li>public </li>
+<ul> 
+
+<li>image  </li>
+<li>javascript </li>
+<li> stylesheet </li> 
+<ul>
+<li> mainCss.css(the main css)</li>
+</ul>
+</ul>
+<li>routing </li>
+<li>template </li>
+<li>sessionManagment </li>
+<li> view</li>
+<li>MyApplication.scala (the main class.)</li>
+</ul>
+
+</ul>
+<li> webapp </li>
+</ul>
+<li>test</li>
+
+</ul>
+<li> target  </li>
+<ul>
+<li> scala-2.5.1 </li>
+<li> streams </li>
+</ul>
+<li>  build-sbt  </li>
+<li>  sbt.launch.jar</li>
+</ul>
 <div class="newApp">
 <a href="http://localhost:8080/ide">Next</a>
 </div>

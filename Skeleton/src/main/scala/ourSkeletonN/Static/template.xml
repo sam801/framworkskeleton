@@ -1,20 +1,32 @@
 <?xml version="1.0"?>
 <surround with="index.html" at="here">
-<div class="newApp">
 <h2> Template</h2>
 <div class="imp">
 <p>First,we need an object of the Template class in order to use its features</p> 
 <div class ="per">  
    <div class="zero"> val template = new Template()</div>
   </div>
-  <p>E.g The following code is used to load your preferred template.</p> 
-  <div class ="per">  
+  <p>The following code is used to load your html file.</p> 
+ <div class ="per"> 
    <div class="zero"> def loadPage(fileName: String): NodeSeq = {</div>
-   <div class="two"> val basePage = scala.io.Source.fromFile("src/main/scala/ourSkeletonN/View/" + fileName).getLines.mkString</div>
+   <div class="two"> val basePage = scala.io.Source.fromFile("file-path" + fileName).getLines.mkString</div>
    <div class="two"> return XML.loadString(basePage)</div>
   }
+</div>
+  <p>The following code is used to load css file.</p> 
+ <div class ="per">  
+    <div class="zero">   def loadCss(filePath: String) = {</div>
+    <div class="two">  val basePage = scala.io.Source.fromFile("filePath" + fileName).getLines.mkString</div>
+    <div class="two">  basePage </div>
+  }
+ </div>
+  <p>The following code is used to load Javascript file.</p> 
+ <div class ="per"> 
+   <div class="zero"> def loadJs(filePath: String) = {</div>
+   <div class="two">val basePage = scala.io.Source.fromFile("filePath" + fileName)(scala.io.Codec.ISO8859).toArray</div>
+   <div class="two"> val basePage</div>
+  }
   </div>
- <a href="http://localhost:8080/form">Next</a>
+  <a href="http://localhost:8080/form">Next</a>
   </div>
-  </div>
-</surround>
+ </surround>

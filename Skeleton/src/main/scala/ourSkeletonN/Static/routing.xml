@@ -3,15 +3,25 @@
 <div class="newApp">
 <h2> Routing </h2>
 <div class="imp">
-<p>First instantiation of Routing class object must be done in order to us it features</p> 
+<ul>
+<li>First instantiation of Routing class object must be done in order to us it features</li> 
 <div class ="per">  
    <div class="zero"> val routing = new Routing()</div>
   </div>
-  <p>Then you can add your routing in the hashmap as follows inside your main class.</p> 
+ <li>Then you can add your routing in the hashmap as follows inside your main class.</li> 
   <div class ="per">  
-   <div class="zero">routing.addRoute("/", main)</div>
+  <div class="zero">routing.addRoute("/", main)</div>
+  <div class="zero">routing.addRoute("/", signIn)</div>
   </div>
-  
+ <li> The main and singin  are  functions which takes http request and http response argument, see the code below.</li>
+ <div class ="per">  
+   <div class="zero"> def main(req: HttpServletRequest, resp: HttpServletResponse) = { </div>
+   <div class="one">  val xml = template.setUpTemplate("model.xml")</div>
+   <div class="one">   val html = prepareForm(xml)</div>
+   <div class="one">  resp.getWriter.write(new PrettyPrinter(72, 2).formatNodes(html))</div>
+  }
+</div>
+  </ul>  
 <a href="http://localhost:8080/persistance">Next</a>
 </div>
 </div>

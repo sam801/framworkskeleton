@@ -1,13 +1,18 @@
 <?xml version="1.0"?>
 <surround with="index.html" at="here">
-<div class="newApp">
 <h2> Session </h2>
-</div>
 <div class="imp">
- <p id="p">First instantiation of SessionManagement class object must be done in order to us it features.</p> 
-<div class ="per">  
+ <p>First instantiation of SessionManagement class object must be done in order to use it features.</p> 
+ <div class ="per">  
    <div class="zero"> val session = new Session()</div>
-  </div>
+   <p> For example, you can use the following code in order to set the time out for the session.</p>
+   <div class="zero"> var currentContext = session.getCurrentContext </div>
+   <div class="zero"> currentContext = session.newContext(req, resp, currentContext)</div>
+   <div class="zero"> currentContext().session.setMaxInactiveInterval(10)</div>
+   <div class="one"> if(currentContext().session.isNew()){</div>
+   <div class="two"> loadHome(req,resp)</div>
+  }
+ </div>
  <a href="http://localhost:8080/template">Back</a>
  </div>
 </surround>
