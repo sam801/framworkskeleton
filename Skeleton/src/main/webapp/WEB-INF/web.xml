@@ -2,7 +2,7 @@
 <web-app>
   <servlet>
     <servlet-name>SimpleServlet</servlet-name>
-    <servlet-class>myApp.MyApplication</servlet-class>
+    <servlet-class>ourSkeletonN.MyApplication</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>SimpleServlet</servlet-name>
