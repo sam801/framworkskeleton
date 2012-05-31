@@ -18,17 +18,17 @@ class Template {
    * @param filename The file to be displayed
    */
   def loadPage(fileName: String): NodeSeq = {
-    val basePage = scala.io.Source.fromFile("src/main/scala/ourSkeleton/" + fileName).getLines.mkString
+    val basePage = scala.io.Source.fromFile("src/main/scala/ourSkeleton/View/" + fileName).getLines.mkString
     return XML.loadString(basePage)
   }
   
   def loadCss(filePath: String) = {
-    val basePage = scala.io.Source.fromFile("src/main/scala/ourSkeleton/" + filePath).getLines.mkString
+    val basePage = scala.io.Source.fromFile("src/main/scala/ourSkeleton/Public/Stylesheet/" + filePath).getLines.mkString
       
     basePage
   }
    def loadJs(filePath: String) = {
-    val basePage = scala.io.Source.fromFile("src/main/scala/ourSkeleton/" + filePath)(scala.io.Codec.ISO8859).toArray
+    val basePage = scala.io.Source.fromFile("src/main/scala/ourSkeleton/Public/Javascript/" + filePath)(scala.io.Codec.ISO8859).toArray
       
     basePage
   }
@@ -40,7 +40,7 @@ class Template {
    * @param fileName The file containing the template to be used
    */
   def getDefaultTemplate(fileName: String) = {
-    val surround = scala.io.Source.fromFile("src/main/scala/ourSkeleton/" + fileName).getLines.mkString
+    val surround = scala.io.Source.fromFile("src/main/scala/ourSkeleton/View/" + fileName).getLines.mkString
     XML.loadString(surround)
   }
 
