@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<surround with="index.html" at="here">
-<div class="code">
- <p> This is a framework built as a group project in Atelier IV, USI</p>			
- </div>
-</surround>
